@@ -1,0 +1,32 @@
+@model PortalCampanasMVC.Models.ResumenCampanasViewModel
+@{
+    ViewData["Title"] = "Resumen";
+}
+
+<h1 class="mb-4">Resumen</h1>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-3">
+        <div class="card campaign-card text-center"><div class="card-body"><div class="summary-label">Total campañas</div><div class="summary-value">@Model.TotalCampanas</div></div></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card campaign-card text-center"><div class="card-body"><div class="summary-label">Campañas vigentes</div><div class="summary-value">@Model.CampanasVigentes</div></div></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card campaign-card text-center"><div class="card-body"><div class="summary-label">Campañas próximas</div><div class="summary-value">@Model.CampanasProximas</div></div></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card campaign-card text-center"><div class="card-body"><div class="summary-label">Promedio descuento</div><div class="summary-value">@Model.PromedioDescuento.ToString("0.##")%</div></div></div>
+    </div>
+</div>
+
+<div class="card campaign-card">
+    <div class="card-body p-4">
+        <h4 class="mb-3">Cantidad por canal</h4>
+        <div class="d-flex flex-column gap-3">
+            <div class="summary-row"><span>Web</span><strong>@Model.CantidadWeb</strong></div>
+            <div class="summary-row"><span>App</span><strong>@Model.CantidadApp</strong></div>
+            <div class="summary-row"><span>Tienda</span><strong>@Model.CantidadTienda</strong></div>
+        </div>
+    </div>
+</div>

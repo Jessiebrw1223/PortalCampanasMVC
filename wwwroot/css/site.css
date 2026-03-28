@@ -1,0 +1,67 @@
+body {
+    background-color: #f6f4f3;
+    color: #1f2937;
+}
+
+.brand-retail {
+    color: #f15a24 !important;
+}
+
+.btn-retail {
+    background-color: #f15a24;
+    border-color: #f15a24;
+    color: #fff;
+}
+
+.btn-retail:hover {
+    background-color: #d94d1b;
+    border-color: #d94d1b;
+    color: #fff;
+}
+
+.campaign-card {
+    border: 1px solid #ece7e4;
+    border-radius: 16px;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+
+.campaign-badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.badge-vigente { background-color: #22c55e; }
+.badge-proxima { background-color: #3b82f6; }
+.badge-finalizada { background-color: #d1d5db; color: #374151; }
+
+.channel-chip {
+    display: inline-block;
+    background: #f3f4f6;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.summary-label {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.summary-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9rem 1rem;
+    border: 1px solid #ece7e4;
+    border-radius: 12px;
+    background: #fff;
+}

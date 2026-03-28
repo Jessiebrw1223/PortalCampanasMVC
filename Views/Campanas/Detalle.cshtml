@@ -1,0 +1,31 @@
+@model PortalCampanasMVC.Models.Campana
+@{
+    ViewData["Title"] = "Detalle";
+    var badgeClass = Model.Estado == "Vigente" ? "badge-vigente" : Model.Estado == "Próxima" ? "badge-proxima" : "badge-finalizada";
+}
+
+<a asp-controller="Campanas" asp-action="Index" class="btn btn-link ps-0 mb-3 text-decoration-none">← Volver al listado</a>
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card campaign-card">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                    <h2 class="mb-0">@Model.Nombre</h2>
+                    <span class="campaign-badge @badgeClass">@Model.Estado</span>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6"><strong>Categoría</strong><div>@Model.Categoria</div></div>
+                    <div class="col-md-6"><strong>Canal</strong><div>@Model.Canal</div></div>
+                    <div class="col-md-6"><strong>Inicio</strong><div>@Model.FechaInicio.ToString("dd 'de' MMMM 'de' yyyy")</div></div>
+                    <div class="col-md-6"><strong>Fin</strong><div>@Model.FechaFin.ToString("dd 'de' MMMM 'de' yyyy")</div></div>
+                    <div class="col-md-6"><strong>Descuento</strong><div>@Model.DescuentoPct %</div></div>
+                </div>
+
+                <h5>Descripción</h5>
+                <p class="mb-0">@Model.Descripcion</p>
+            </div>
+        </div>
+    </div>
+</div>
