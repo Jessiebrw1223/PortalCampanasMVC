@@ -12,7 +12,7 @@ public class CampanasController : Controller
     {
         _campanaService = campanaService;
     }
-
+// Versión B: controlador ajustado para resumen y filtros
     public IActionResult Index(string? categoria, string? estado)
     {
         var campanas = _campanaService.ObtenerTodas().AsQueryable();
