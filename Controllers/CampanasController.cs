@@ -12,8 +12,9 @@ public class CampanasController : Controller
     {
         _campanaService = campanaService;
     }
-// Versión A: filtro preparado para campañas comerciales
-    public IActionResult Index(string? categoria, string? estado)
+
+// Controlador ajustado para filtros y resumen de campañas
+public IActionResult Index(string? categoria, string? estado)
     {
         var campanas = _campanaService.ObtenerTodas().AsQueryable();
 
